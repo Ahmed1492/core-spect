@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2a63ad"/>
+      <stop offset="1" stop-color="#0d2444"/>
+    </linearGradient>
+    <linearGradient id="chrome" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.3" stop-color="#c3cad3"/>
+      <stop offset="0.5" stop-color="#7d8796"/>
+      <stop offset="0.62" stop-color="#e6e9ee"/>
+      <stop offset="1" stop-color="#8a95a4"/>
+    </linearGradient>
+    <linearGradient id="red" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff7a3d"/>
+      <stop offset="0.5" stop-color="#ef2b2b"/>
+      <stop offset="1" stop-color="#b80d24"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+  <g transform="translate(9 7) scale(0.58) skewX(-8)">
+    <path d="M72 13H27Q14 13 14 26V28Q14 41 27 41H55Q68 41 68 54V56Q68 69 55 69H9" fill="none" stroke="#0d2444" stroke-width="17" stroke-linejoin="round"/>
+    <path d="M72 13H27Q14 13 14 26V28Q14 41 27 41H55Q68 41 68 54V56Q68 69 55 69H9" fill="none" stroke="url(#chrome)" stroke-width="13" stroke-linejoin="round"/>
+    <path d="M38 10L79 8.5L75.5 16L35 17Z" fill="url(#red)"/>
+    <path d="M12 38.5L51 37L47.5 44.5L8.5 45.5Z" fill="url(#red)"/>
+  </g>
+</svg>
