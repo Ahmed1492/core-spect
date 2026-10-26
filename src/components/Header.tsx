@@ -71,7 +71,8 @@ export default function Header() {
     const onScroll = () => {
       const y = window.scrollY;
       const max = document.documentElement.scrollHeight - window.innerHeight;
-      setScrolled(y > 40);
+      // Hysteresis: separate collapse/expand points so small scroll jumps can't flip the state.
+      setScrolled((prev) => (prev ? y > 10 : y > 120));
       setProgress(max > 0 ? Math.min(1, y / max) : 0);
     };
     onScroll();
@@ -106,13 +107,9 @@ export default function Header() {
   const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
 
   return (
-    <header className="sticky top-0 z-50">
-      {/* Top info bar */}
-      <div
-        className={`hidden overflow-hidden bg-brand-dark text-xs text-slate-300 transition-all duration-300 md:block ${
-          scrolled ? "max-h-0 opacity-0" : "max-h-10 opacity-100"
-        }`}
-      >
+    <>
+      {/* Top info bar: normal flow (not sticky), so it scrolls away without changing layout height */}
+      <div className="hidden bg-brand-dark text-xs text-slate-300 md:block">
         <div className="mx-auto flex h-10 max-w-6xl items-center justify-between px-4">
           <div className="flex items-center gap-6">
             <a href={`tel:${company.phones[0]}`} className="flex items-center gap-2 transition hover:text-white">
@@ -128,23 +125,24 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Main bar */}
+      <header className="sticky top-0 z-50">
+      {/* Main bar: fixed height; only visual styles change on scroll */}
       <div
-        className={`relative border-b transition-all duration-300 ${
+        className={`relative border-b transition-[background-color,box-shadow,border-color] duration-300 ${
           scrolled
             ? "border-transparent bg-white/85 shadow-lg shadow-slate-900/5 backdrop-blur-xl"
             : "border-slate-200 bg-white"
         }`}
       >
         <div
-          className={`mx-auto flex max-w-6xl items-center justify-between gap-6 px-4 transition-all duration-300 ${
-            scrolled ? "py-2" : "py-3"
-          }`}
+          className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-4 py-3"
         >
           <Link href="/" className="shrink-0" aria-label="Core Spect home">
             <Logo
-              id="logo-header"
-              className={`w-auto transition-all duration-300 ${scrolled ? "h-11" : "h-12 md:h-[56px]"}`}
+              priority
+              className={`h-12 w-auto origin-left transition-transform duration-300 md:h-[56px] ${
+                scrolled ? "scale-[0.85]" : ""
+              }`}
             />
           </Link>
 
@@ -312,6 +310,7 @@ export default function Header() {
           </div>
         </nav>
       </div>
-    </header>
+      </header>
+    </>
   );
 }

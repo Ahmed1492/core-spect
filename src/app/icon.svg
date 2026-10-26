@@ -1,27 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#2a63ad"/>
-      <stop offset="1" stop-color="#0d2444"/>
-    </linearGradient>
-    <linearGradient id="chrome" x1="0" y1="0" x2="0.35" y2="1">
-      <stop offset="0" stop-color="#ffffff"/>
-      <stop offset="0.3" stop-color="#c3cad3"/>
-      <stop offset="0.5" stop-color="#7d8796"/>
-      <stop offset="0.62" stop-color="#e6e9ee"/>
-      <stop offset="1" stop-color="#8a95a4"/>
-    </linearGradient>
-    <linearGradient id="red" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#ff7a3d"/>
-      <stop offset="0.5" stop-color="#ef2b2b"/>
-      <stop offset="1" stop-color="#b80d24"/>
-    </linearGradient>
+    <linearGradient id="gloss" x1="0" y1="0" x2="0.25" y2="1"><stop offset="0" stop-color="#3a3a3a"/><stop offset="0.18" stop-color="#0a0a0a"/><stop offset="0.45" stop-color="#141414"/><stop offset="0.55" stop-color="#4a4a4a"/><stop offset="0.68" stop-color="#0d0d0d"/><stop offset="1" stop-color="#262626"/></linearGradient>
+    <linearGradient id="streak" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#c8102e"/><stop offset="0.35" stop-color="#e3261f"/><stop offset="0.55" stop-color="#ff8a2a"/><stop offset="0.75" stop-color="#e3261f"/><stop offset="1" stop-color="#ff7a2a"/></linearGradient>
+    <linearGradient id="red" gradientUnits="userSpaceOnUse" x1="0" y1="257" x2="0" y2="330"><stop offset="0" stop-color="#f03030"/><stop offset="1" stop-color="#c8102e"/></linearGradient>
+    <filter id="glow" x="-20%" y="-60%" width="140%" height="220%"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
   </defs>
-  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
-  <g transform="translate(9 7) scale(0.58) skewX(-8)">
-    <path d="M72 13H27Q14 13 14 26V28Q14 41 27 41H55Q68 41 68 54V56Q68 69 55 69H9" fill="none" stroke="#0d2444" stroke-width="17" stroke-linejoin="round"/>
-    <path d="M72 13H27Q14 13 14 26V28Q14 41 27 41H55Q68 41 68 54V56Q68 69 55 69H9" fill="none" stroke="url(#chrome)" stroke-width="13" stroke-linejoin="round"/>
-    <path d="M38 10L79 8.5L75.5 16L35 17Z" fill="url(#red)"/>
-    <path d="M12 38.5L51 37L47.5 44.5L8.5 45.5Z" fill="url(#red)"/>
-  </g>
+  <rect width="64" height="64" rx="14" fill="#ffffff"/>
+  <g transform="translate(1.7 9) scale(0.15) translate(-55 -90)">
+  <path fill="url(#gloss)" d="M452 105 L195 105 C120 105 72 155 72 228 L72 290 C72 305 80 318 95 326 L150 290 C134 276 127 258 127 232 C127 190 160 160 200 160 L400 160 Z"/>
+  <path fill="url(#gloss)" d="M218 227 L372 227 C410 227 432 258 432 304 C432 348 410 382 372 382 L62 382 L108 334 L355 334 C372 334 382 320 382 302 C382 283 372 267 355 267 L172 267 Z"/>
+  <path fill="url(#streak)" d="M268 183 L448 183 L420 208 L250 208 C252 194 258 186 268 183 Z"/>
+  <path fill="url(#streak)" d="M150 293 L315 293 L298 315 L135 315 Z"/>
+  <path fill="none" stroke="#ffd23a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)" d="M190 304 L200 304 L207 292 L214 314 L221 292 L228 314 L235 292 L242 314 L249 292 L256 314 L263 292 L270 304 L280 304"/></g>
 </svg>

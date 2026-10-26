@@ -51,7 +51,7 @@ export default function Footer() {
         {/* Columns */}
         <div className="grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-[1.4fr_0.8fr_1.2fr_1.2fr]">
           <div>
-            <Logo id="logo-footer" tone="dark" className="h-14 w-auto" />
+            <Logo tone="dark" className="h-14 w-auto" />
             <p className="mt-5 max-w-xs text-sm leading-relaxed">
               Inspection, integrity, engineering and asset reliability services, using the latest
               technologies to keep your equipment safe and in service.
