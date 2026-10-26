@@ -6,7 +6,7 @@ import { accreditations, company, nav, serviceGroups } from "@/lib/site";
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-[#0b1f3b] text-slate-300">
+    <footer className="relative overflow-hidden bg-[#0a0b0e] text-slate-300">
       {/* Subtle grid + glow */}
       <div
         aria-hidden
@@ -51,7 +51,7 @@ export default function Footer() {
         {/* Columns */}
         <div className="grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-[1.4fr_0.8fr_1.2fr_1.2fr]">
           <div>
-            <Logo tone="dark" className="h-14 w-auto" />
+            <Logo variant="full" tone="dark" className="h-28 w-auto" />
             <p className="mt-5 max-w-xs text-sm leading-relaxed">
               Inspection, integrity, engineering and asset reliability services, using the latest
               technologies to keep your equipment safe and in service.
@@ -106,7 +106,7 @@ export default function Footer() {
             <p className="text-sm font-bold uppercase tracking-wider text-white">Get in touch</p>
             <ul className="mt-5 space-y-4 text-sm">
               <li className="flex gap-3">
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/5 text-sky-300">
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/5 text-red-300">
                   <Icon name="pin" className="h-4 w-4" />
                 </span>
                 <span>
@@ -117,7 +117,7 @@ export default function Footer() {
                 </span>
               </li>
               <li className="flex gap-3">
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/5 text-sky-300">
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/5 text-red-300">
                   <Icon name="phone" className="h-4 w-4" />
                 </span>
                 <span>
@@ -130,7 +130,7 @@ export default function Footer() {
                 </span>
               </li>
               <li className="flex gap-3">
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/5 text-sky-300">
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/5 text-red-300">
                   <Icon name="fax" className="h-4 w-4" />
                 </span>
                 <span>

@@ -4,7 +4,7 @@
   --background: #ffffff;
   --foreground: #1b2433;
   --brand: #1f4e8c;
-  --brand-dark: #13325c;
+  --brand-dark: #121418;
   --accent: #c8102e;
   --muted: #f3f6fa;
 }
@@ -170,7 +170,39 @@ details > summary::-webkit-details-marker {
   animation: hero-beam 7s cubic-bezier(0.45, 0, 0.55, 1) infinite;
 }
 
+@keyframes hero-flame {
+  0%,
+  100% {
+    transform: scale(1, 1);
+  }
+  30% {
+    transform: scale(0.85, 1.15);
+  }
+  60% {
+    transform: scale(1.1, 0.9);
+  }
+}
+.hero-flame {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  animation: hero-flame 1.4s ease-in-out infinite;
+}
+@keyframes hero-fan {
+  0%,
+  100% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+.hero-fan {
+  animation: hero-fan 2.4s ease-in-out infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .hero-flame,
+  .hero-fan,
   .marquee-track,
   .hero-ring,
   .hero-blip,

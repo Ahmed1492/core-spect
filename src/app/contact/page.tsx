@@ -125,7 +125,7 @@ export default function ContactPage() {
           <div className="grid lg:grid-cols-[1fr_1.6fr]">
             <div className="relative overflow-hidden bg-brand-dark p-8 text-white md:p-10">
               <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-accent/20 blur-3xl" />
-              <div className="pointer-events-none absolute -bottom-24 -left-16 h-64 w-64 rounded-full bg-sky-400/10 blur-3xl" />
+              <div className="pointer-events-none absolute -bottom-24 -left-16 h-64 w-64 rounded-full bg-orange-400/10 blur-3xl" />
               <div className="relative">
                 <p className="text-xs font-bold uppercase tracking-[0.2em] text-red-300">
                   Request a quote

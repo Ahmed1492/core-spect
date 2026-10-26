@@ -21,14 +21,18 @@ export default function AboutPage() {
       />
 
       <section className="mx-auto grid max-w-6xl gap-8 px-4 py-16 md:grid-cols-2">
-        <Reveal variant="left" className="rounded-lg border-l-4 border-brand bg-muted p-8">
-          <h2 className="text-xl font-bold text-brand">Our Mission</h2>
-          <p className="mt-3 text-lg">{mission}</p>
+        <Reveal
+          variant="left"
+          className="relative overflow-hidden rounded-xl border-l-4 border-accent bg-gradient-to-br from-[#1f2329] to-[#0a0b0e] p-8 text-white shadow-xl shadow-black/20"
+        >
+          <span className="pointer-events-none absolute -right-12 -top-12 h-40 w-40 rounded-full bg-accent/20 blur-2xl" />
+          <h2 className="relative text-xl font-bold text-red-300">Our Mission</h2>
+          <p className="relative mt-3 text-lg text-slate-100">{mission}</p>
         </Reveal>
         <Reveal
           variant="right"
           delay={120}
-          className="rounded-lg border-l-4 border-accent bg-muted p-8"
+          className="rounded-xl border border-l-4 border-slate-200 border-l-accent bg-white p-8 shadow-lg"
         >
           <h2 className="text-xl font-bold text-accent">Our Vision</h2>
           <p className="mt-3 text-lg">{vision}</p>

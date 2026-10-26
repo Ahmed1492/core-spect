@@ -58,7 +58,7 @@ function Marquee({ items, className = "" }: { items: string[]; className?: strin
 function HeroPanel() {
   return (
     <div className="animate-fade-up relative hidden lg:block" style={{ animationDelay: "350ms" }}>
-      <div className="rounded-2xl border border-white/15 bg-[#0d2444]/70 p-6 shadow-2xl shadow-black/30 backdrop-blur-md">
+      <div className="rounded-2xl border border-white/15 bg-black/45 p-6 shadow-2xl shadow-black/30 backdrop-blur-md">
         <div className="flex items-center justify-between text-xs uppercase tracking-widest text-slate-300">
           <span>Sample A-scan</span>
           <span className="flex items-center gap-2">
@@ -221,9 +221,14 @@ export default function Home() {
             </Reveal>
           </div>
           <div className="grid gap-5">
-            <Reveal variant="right" className="rounded-2xl bg-brand p-8 text-white shadow-xl">
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-red-200">Our mission</p>
-              <p className="mt-3 text-xl font-semibold leading-snug">{mission}</p>
+            <Reveal
+              variant="right"
+              className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#1f2329] to-[#0a0b0e] p-8 text-white shadow-xl shadow-black/25"
+            >
+              <span className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-accent to-orange-400" />
+              <span className="pointer-events-none absolute -right-12 -top-12 h-40 w-40 rounded-full bg-accent/20 blur-2xl" />
+              <p className="relative text-xs font-bold uppercase tracking-[0.2em] text-red-300">Our mission</p>
+              <p className="relative mt-3 text-xl font-semibold leading-snug">{mission}</p>
             </Reveal>
             <Reveal
               variant="right"
@@ -350,7 +355,7 @@ export default function Home() {
                   variant="zoom"
                   className="flex flex-col items-center gap-3 rounded-xl border border-white/10 p-5 text-center transition hover:border-white/30 hover:bg-white/5"
                 >
-                  <Icon name={industryIcons[name]} className="h-8 w-8 text-sky-300" />
+                  <Icon name={industryIcons[name]} className="h-8 w-8 text-red-300" />
                   <span className="text-sm font-semibold">{name}</span>
                 </Reveal>
               ))}

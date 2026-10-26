@@ -109,7 +109,7 @@ export default function Header() {
   return (
     <>
       {/* Top info bar: normal flow (not sticky), so it scrolls away without changing layout height */}
-      <div className="hidden bg-brand-dark text-xs text-slate-300 md:block">
+      <div className="hidden bg-[#0a0b0e] text-xs text-slate-300 md:block">
         <div className="mx-auto flex h-10 max-w-6xl items-center justify-between px-4">
           <div className="flex items-center gap-6">
             <a href={`tel:${company.phones[0]}`} className="flex items-center gap-2 transition hover:text-white">

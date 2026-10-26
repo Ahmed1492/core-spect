@@ -81,7 +81,7 @@ export default function PageHero({
                   key={c}
                   className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-3.5 py-1.5 text-sm text-slate-100 backdrop-blur"
                 >
-                  <Icon name="check" className="h-3.5 w-3.5 text-sky-300" />
+                  <Icon name="check" className="h-3.5 w-3.5 text-red-300" />
                   {c}
                 </li>
               ))}
